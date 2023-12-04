@@ -1,0 +1,14 @@
+C:\Users\diorh\Documents\GitHub\Solid1\StatePatternProject\StatePatternProject\obj\Debug\net6.0\StatePatternProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diorh\Documents\GitHub\Solid1\StatePatternProject\StatePatternProject\obj\Debug\net6.0\StatePatternProject.AssemblyInfoInputs.cache
+C:\Users\diorh\Documents\GitHub\Solid1\StatePatternProject\StatePatternProject\obj\Debug\net6.0\StatePatternProject.AssemblyInfo.cs
+C:\Users\diorh\Documents\GitHub\Solid1\StatePatternProject\StatePatternProject\obj\Debug\net6.0\StatePatternProject.csproj.CoreCompileInputs.cache
+C:\Users\diorh\Documents\GitHub\Solid1\StatePatternProject\StatePatternProject\bin\Debug\net6.0\StatePatternProject.exe
+C:\Users\diorh\Documents\GitHub\Solid1\StatePatternProject\StatePatternProject\bin\Debug\net6.0\StatePatternProject.deps.json
+C:\Users\diorh\Documents\GitHub\Solid1\StatePatternProject\StatePatternProject\bin\Debug\net6.0\StatePatternProject.runtimeconfig.json
+C:\Users\diorh\Documents\GitHub\Solid1\StatePatternProject\StatePatternProject\bin\Debug\net6.0\StatePatternProject.dll
+C:\Users\diorh\Documents\GitHub\Solid1\StatePatternProject\StatePatternProject\bin\Debug\net6.0\StatePatternProject.pdb
+C:\Users\diorh\Documents\GitHub\Solid1\StatePatternProject\StatePatternProject\obj\Debug\net6.0\StatePatternProject.dll
+C:\Users\diorh\Documents\GitHub\Solid1\StatePatternProject\StatePatternProject\obj\Debug\net6.0\refint\StatePatternProject.dll
+C:\Users\diorh\Documents\GitHub\Solid1\StatePatternProject\StatePatternProject\obj\Debug\net6.0\StatePatternProject.pdb
+C:\Users\diorh\Documents\GitHub\Solid1\StatePatternProject\StatePatternProject\obj\Debug\net6.0\StatePatternProject.genruntimeconfig.cache
+C:\Users\diorh\Documents\GitHub\Solid1\StatePatternProject\StatePatternProject\obj\Debug\net6.0\ref\StatePatternProject.dll
