@@ -7,7 +7,6 @@ namespace StatePatternTest
         [SetUp]
         public void Setup()
         {
-            // Add any setup code if needed
         }
 
         [Test]
@@ -16,15 +15,12 @@ namespace StatePatternTest
             // Arrange
             var trafficLight = new TrafficLight(new RedState());
 
-            // Act
-            trafficLight.ChangeState();
-
-            // Assert
-            Assert.AreEqual("Traffic light is green", GetConsoleOutput(trafficLight.ChangeState));
+            // Act & Assert
+            Assert.AreEqual("RedState", trafficLight.GetCurrentStateName());
         }
 
         [Test]
-        public void TestTrafficLightStateTransition()
+        public void TestTransitionFromRedToYellow()
         {
             // Arrange
             var trafficLight = new TrafficLight(new RedState());
@@ -33,57 +29,57 @@ namespace StatePatternTest
             trafficLight.ChangeState();
 
             // Assert
-            Assert.AreEqual("Traffic light is yellow", GetConsoleOutput(trafficLight.ChangeState));
+            Assert.AreEqual("YellowAfterRedState", trafficLight.GetCurrentStateName());
         }
 
         [Test]
-        public void TestTrafficLightCycle()
+        public void TestTransitionFromYellowToGreen()
+        {
+            // Arrange
+            var trafficLight = new TrafficLight(new YellowAfterRedState());
+
+            // Act
+            trafficLight.ChangeState();
+
+            // Assert
+            Assert.AreEqual("GreenState", trafficLight.GetCurrentStateName());
+        }
+
+        [Test]
+        public void TestMultipleStateChanges()
         {
             // Arrange
             var trafficLight = new TrafficLight(new RedState());
 
-            // Act and Assert
-            Assert.AreEqual("Traffic light is green", GetConsoleOutput(trafficLight.ChangeState));
-            Assert.AreEqual("Traffic light is yellow", GetConsoleOutput(trafficLight.ChangeState));
-            Assert.AreEqual("Traffic light is red", GetConsoleOutput(trafficLight.ChangeState));
+            // Act
+            trafficLight.ChangeState();
+            trafficLight.ChangeState();
+            trafficLight.ChangeState();
+
+            // Assert
+            Assert.AreEqual("YellowAfterGreenState", trafficLight.GetCurrentStateName());
         }
 
         [Test]
-        public void TestMultipleCycles()
+        public void TestTransitionLoop()
         {
             // Arrange
-            var trafficLight = new TrafficLight(new RedState());
+            var trafficLight = new TrafficLight(new GreenState());
 
-            // Act and Assert
-            for (int i = 0; i < 3; i++)
-            {
-                Assert.AreEqual("Traffic light is green", GetConsoleOutput(trafficLight.ChangeState));
-                Assert.AreEqual("Traffic light is yellow", GetConsoleOutput(trafficLight.ChangeState));
-                Assert.AreEqual("Traffic light is red", GetConsoleOutput(trafficLight.ChangeState));
-            }
-        }
+            // Act
+            trafficLight.ChangeState();
+            trafficLight.ChangeState();
+            trafficLight.ChangeState();
+            trafficLight.ChangeState();
 
-        [Test]
-        public void TestTransitionFromYellowToRed()
-        {
-            // Arrange
-            var trafficLight = new TrafficLight(new YellowState());
-
-            // Act and Assert
-            Assert.AreEqual("Traffic light is red", GetConsoleOutput(trafficLight.ChangeState));
-        }
-
-        // Helper method to capture console output during testing
-        private string GetConsoleOutput(Action action)
-        {
-            var consoleOutput = new StringWriter();
-            Console.SetOut(consoleOutput);
-
-            action.Invoke();
-
-            consoleOutput.Flush();
-            return consoleOutput.ToString().Trim();
+            // Assert
+            Assert.AreEqual("GreenState", trafficLight.GetCurrentStateName());
         }
     }
 
-}
+
+
+
+
+    }
+

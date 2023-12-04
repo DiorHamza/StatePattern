@@ -4,13 +4,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Create a traffic light with an initial state (e.g., RedState)
+        // Created a traffic light with an initial state of RedState
         var trafficLight = new TrafficLight(new RedState());
 
-        // Change the state of the traffic light, and it will transition to the next state
-        trafficLight.ChangeState();
-
-        // Change the state of the traffic light again to simulate further stages
-        trafficLight.ChangeState();
+        // Looped through state changes (for simplicity, 10 iterations)
+        for (int i = 0; i < 10; i++)
+        {
+            // Called the ChangeState method to transition to the next state
+            trafficLight.ChangeState();
+        }
     }
 }
+
